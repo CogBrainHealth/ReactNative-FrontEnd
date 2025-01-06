@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* cogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* cogTests.m */; };
+		016ED72452C84A24A4119F91 /* SpoqaHanSansNeo-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 319D5F4D801B4FEE91B58812 /* SpoqaHanSansNeo-Thin.ttf */; };
 		0C80B921A6F3F58F76C31292 /* libPods-cog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-cog.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		4F404CF03B44480A87ED2920 /* SpoqaHanSansNeo-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9CD0EDEDDF74A7A94DCF1B6 /* SpoqaHanSansNeo-Light.ttf */; };
+		548686EAC07849FF96245D00 /* SpoqaHanSansNeo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A5153A390E441C29D102F6A /* SpoqaHanSansNeo-Bold.ttf */; };
+		61C52F045CEE4E95B2ECCC0E /* SpoqaHanSansNeo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 923EC6E884834388BDFF1B87 /* SpoqaHanSansNeo-Regular.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-cog-cogTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-cog-cogTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		C70FCD462FB947F8A6392B6E /* NPSfont_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C00796E299246379AF755E1 /* NPSfont_bold.ttf */; };
+		D615B3F698FE472AA7004715 /* SpoqaHanSansNeo-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 134792B742B241F6B2B57D02 /* SpoqaHanSansNeo-Medium.ttf */; };
 		EF008982894471413266CB81 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +37,7 @@
 		00E356EE1AD99517003FC87E /* cogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* cogTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cogTests.m; sourceTree = "<group>"; };
+		134792B742B241F6B2B57D02 /* SpoqaHanSansNeo-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SpoqaHanSansNeo-Medium.ttf"; path = "../src/assets/fonts/SpoqaHanSansNeo-Medium.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* cog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = cog/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = cog/AppDelegate.mm; sourceTree = "<group>"; };
@@ -39,12 +46,17 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = cog/main.m; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = cog/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-cog-cogTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cog-cogTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		319D5F4D801B4FEE91B58812 /* SpoqaHanSansNeo-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SpoqaHanSansNeo-Thin.ttf"; path = "../src/assets/fonts/SpoqaHanSansNeo-Thin.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-cog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cog.debug.xcconfig"; path = "Target Support Files/Pods-cog/Pods-cog.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-cog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cog.release.xcconfig"; path = "Target Support Files/Pods-cog/Pods-cog.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-cog-cogTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cog-cogTests.debug.xcconfig"; path = "Target Support Files/Pods-cog-cogTests/Pods-cog-cogTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-cog.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cog.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A5153A390E441C29D102F6A /* SpoqaHanSansNeo-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SpoqaHanSansNeo-Bold.ttf"; path = "../src/assets/fonts/SpoqaHanSansNeo-Bold.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = cog/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-cog-cogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cog-cogTests.release.xcconfig"; path = "Target Support Files/Pods-cog-cogTests/Pods-cog-cogTests.release.xcconfig"; sourceTree = "<group>"; };
+		923EC6E884834388BDFF1B87 /* SpoqaHanSansNeo-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SpoqaHanSansNeo-Regular.ttf"; path = "../src/assets/fonts/SpoqaHanSansNeo-Regular.ttf"; sourceTree = "<group>"; };
+		9C00796E299246379AF755E1 /* NPSfont_bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = NPSfont_bold.ttf; path = ../src/assets/fonts/NPSfont_bold.ttf; sourceTree = "<group>"; };
+		B9CD0EDEDDF74A7A94DCF1B6 /* SpoqaHanSansNeo-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SpoqaHanSansNeo-Light.ttf"; path = "../src/assets/fonts/SpoqaHanSansNeo-Light.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -125,6 +137,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				B15AFA0A03E24EB4AFC0E703 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -138,6 +151,20 @@
 				00E356EE1AD99517003FC87E /* cogTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B15AFA0A03E24EB4AFC0E703 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9C00796E299246379AF755E1 /* NPSfont_bold.ttf */,
+				6A5153A390E441C29D102F6A /* SpoqaHanSansNeo-Bold.ttf */,
+				B9CD0EDEDDF74A7A94DCF1B6 /* SpoqaHanSansNeo-Light.ttf */,
+				134792B742B241F6B2B57D02 /* SpoqaHanSansNeo-Medium.ttf */,
+				923EC6E884834388BDFF1B87 /* SpoqaHanSansNeo-Regular.ttf */,
+				319D5F4D801B4FEE91B58812 /* SpoqaHanSansNeo-Thin.ttf */,
+			);
+			name = Resources;
+			path = "";
 			sourceTree = "<group>";
 		};
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
@@ -247,6 +274,12 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				EF008982894471413266CB81 /* PrivacyInfo.xcprivacy in Resources */,
+				C70FCD462FB947F8A6392B6E /* NPSfont_bold.ttf in Resources */,
+				548686EAC07849FF96245D00 /* SpoqaHanSansNeo-Bold.ttf in Resources */,
+				4F404CF03B44480A87ED2920 /* SpoqaHanSansNeo-Light.ttf in Resources */,
+				D615B3F698FE472AA7004715 /* SpoqaHanSansNeo-Medium.ttf in Resources */,
+				61C52F045CEE4E95B2ECCC0E /* SpoqaHanSansNeo-Regular.ttf in Resources */,
+				016ED72452C84A24A4119F91 /* SpoqaHanSansNeo-Thin.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
