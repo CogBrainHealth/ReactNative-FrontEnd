@@ -18,6 +18,12 @@ function SignUp({ navigation }) {
     inputRange: [0, 100],
     outputRange: ['0%', '100%']
   });
+  const xValue = useRef(new Animated.Value(100)).current;
+  const x = xValue.interpolate({
+    inputRange: [0, 100],
+    outputRange: ['0%', '100%']
+  });
+  const [z, changeZ] = React.useState(-1);
 
   function startAnimation(){
     Animated.timing(yValue, {
@@ -27,67 +33,76 @@ function SignUp({ navigation }) {
       useNativeDriver: false
     }).start();
   }
-  function nextForm() {
-    // navigation.navigate('adminScreen');
-    startAnimation();
-  };
   function signUp(){
-    console.log("request signUp API")
+    if(!policy){
+      return;
+    }
+    //TODO: 회원가입 API 적용
+    changeZ(1);
+    Animated.timing(xValue, {
+      toValue: 0,
+      duration: 50,
+      easing: Easing.linear,
+      useNativeDriver: false
+    }).start();
   };
+  function goSuggestion(){
+    navigation.navigate('suggestion');
+  }
 
   useEffect(() => {
     setTimeout(() => {
       startAnimation();
-    }, 3000)
+    }, 3000);
   }, []); 
 
   return (
     <SafeAreaProvider>
-      <SafeAreaView style={styles.safeAreaView} edges={['top', 'left', 'right']}>
-        <TouchableWithoutFeedback onPress={nextForm}>
-          <View style={styles.main}>
-            <View style={styles.titleDiv}>
-              <Image style={styles.titleImage} source={require('./assets/img/signUp1Title.png')} />
+      <SafeAreaView style={signUp1.safeAreaView} edges={['top', 'left', 'right']}>
+        <TouchableWithoutFeedback onPress={startAnimation}>
+          <View style={signUp1.main}>
+            <View style={signUp1.titleDiv}>
+              <Image style={signUp1.titleImage} source={require('./assets/img/signUp1Title.png')} />
             </View>
-            <View style={styles.imageDiv}>
-              <Image style={styles.image} source={require('./assets/img/signUp1.png')}/>
+            <View style={signUp1.imageDiv}>
+              <Image style={signUp1.image} source={require('./assets/img/signUp1.png')}/>
             </View>
           </View>
         </TouchableWithoutFeedback>
-        <Animated.View style={[popUp.popUpDiv, { transform: [{ translateY: y }]}]}>
-          <Image style={popUp.image} source={require('./assets/img/signUp6.png')}/>
-          <View style={popUp.contentDiv}>
-            <View style={popUp.contentTitleDiv}>
-              <Text style={popUp.contentTitle}>개인 정보 입력</Text>
-              <View style={popUp.contentHr} />
+        <Animated.View style={[signUp7.signUp7Div, { transform: [{ translateY: y }]}]}>
+          <Image style={signUp7.image} source={require('./assets/img/signUp6.png')}/>
+          <View style={signUp7.contentDiv}>
+            <View style={signUp7.contentTitleDiv}>
+              <Text style={signUp7.contentTitle}>개인 정보 입력</Text>
+              <View style={signUp7.contentHr} />
             </View>
-            <View style={popUp.contentInputDiv}>
-              <View style={popUp.contentInputSort}>
+            <View style={signUp7.contentInputDiv}>
+              <View style={signUp7.contentInputSort}>
                 <View>
-                  <Text style={popUp.contentInputTitle}>이름</Text>
-                  <TextInput style={popUp.contentInput} onChangeText={onChangeText} value={text} placeholder='이름을 입력해주세요.'/>
+                  <Text style={signUp7.contentInputTitle}>이름</Text>
+                  <TextInput style={signUp7.contentInput} onChangeText={onChangeText} value={text} placeholder='이름을 입력해주세요.'/>
                 </View>
                 <View>
-                  <Text style={popUp.contentInputTitle}>성별</Text>
-                  <View style={popUp.contentGenderDiv}>
+                  <Text style={signUp7.contentInputTitle}>성별</Text>
+                  <View style={signUp7.contentGenderDiv}>
                     <TouchableWithoutFeedback onPress={() => changeGender(1)}>
-                      <View style={gender === 1 ? [popUp.contentGender, popUp.selected] : [popUp.contentGender, popUp.contentGenderMale]}>
-                        <Text style={gender === 1 ? [popUp.contentGenderText, popUp.selected] : popUp.contentGenderText}>남성</Text>
+                      <View style={gender === 1 ? [signUp7.contentGender, signUp7.selected] : [signUp7.contentGender, signUp7.contentGenderMale]}>
+                        <Text style={gender === 1 ? [signUp7.contentGenderText, signUp7.selected] : signUp7.contentGenderText}>남성</Text>
                       </View>
                     </TouchableWithoutFeedback>
                     <TouchableWithoutFeedback onPress={() => changeGender(2)}>
-                      <View style={gender === 2 ? [popUp.contentGender, popUp.selected] : popUp.contentGender}>
-                        <Text style={gender === 2 ? [popUp.contentGenderText, popUp.selected] : popUp.contentGenderText}>여성</Text>
+                      <View style={gender === 2 ? [signUp7.contentGender, signUp7.selected] : signUp7.contentGender}>
+                        <Text style={gender === 2 ? [signUp7.contentGenderText, signUp7.selected] : signUp7.contentGenderText}>여성</Text>
                       </View>
                     </TouchableWithoutFeedback>
                   </View>
                 </View>
                 <View>
-                  <Text style={popUp.contentInputTitle}>생년월일</Text>
-                  <View style={popUp.contentBirthDateDiv}>
-                    <TextInput style={popUp.contentBirthDate} onChangeText={text => chagneBirthDate({year: text})} value={birthDate.year} placeholder='2000년' placeholderTextColor={colors.strongGray} maxLength={4} returnKeyType='done' keyboardType="number-pad" />
-                    <TextInput style={popUp.contentBirthDate} onChangeText={text => chagneBirthDate({month: text})} value={birthDate.month} placeholder='1월' placeholderTextColor={colors.strongGray} maxLength={2} returnKeyType='done' keyboardType="number-pad" />
-                    <TextInput style={popUp.contentBirthDate} onChangeText={text => chagneBirthDate({date: text})} value={birthDate.date} placeholder='1일' placeholderTextColor={colors.strongGray} maxLength={2} returnKeyType='done' keyboardType="number-pad" />
+                  <Text style={signUp7.contentInputTitle}>생년월일</Text>
+                  <View style={signUp7.contentBirthDateDiv}>
+                    <TextInput style={signUp7.contentBirthDate} onChangeText={text => chagneBirthDate({year: text})} value={birthDate.year} placeholder='2000년' placeholderTextColor={colors.strongGray} maxLength={4} returnKeyType='done' keyboardType="number-pad" />
+                    <TextInput style={signUp7.contentBirthDate} onChangeText={text => chagneBirthDate({month: text})} value={birthDate.month} placeholder='1월' placeholderTextColor={colors.strongGray} maxLength={2} returnKeyType='done' keyboardType="number-pad" />
+                    <TextInput style={signUp7.contentBirthDate} onChangeText={text => chagneBirthDate({date: text})} value={birthDate.date} placeholder='1일' placeholderTextColor={colors.strongGray} maxLength={2} returnKeyType='done' keyboardType="number-pad" />
                   </View>
                 </View>
                 <BouncyCheckbox
@@ -103,20 +118,63 @@ function SignUp({ navigation }) {
                 />
               </View>
               <Pressable onPress={signUp}>
-                <View style={policy ? [popUp.buttonDiv, popUp.active] : popUp.buttonDiv}>
-                  <Text style={popUp.buttonText}>회원가입</Text>
+                <View style={policy ? [signUp7.buttonDiv, signUp7.active] : signUp7.buttonDiv}>
+                  <Text style={signUp7.buttonText}>회원가입</Text>
                 </View>
               </Pressable>
             </View>
           </View>
         </Animated.View>
+        <TouchableWithoutFeedback onPress={goSuggestion}>
+          <Animated.View style={[signUp8.mainDiv, { transform: [{ translateX: x }], zIndex: z }]}>
+            <View style={signUp8.mainContent}>
+              <Text style={signUp8.mainTitle}>환영합니다, <Text style={signUp7.mainTitleName}>{text}님!</Text></Text>
+              <Image style={signUp8.mainImage} source={require('./assets/img/signUp7.png')}/>
+            </View>
+          </Animated.View>
+        </TouchableWithoutFeedback>
       </SafeAreaView>
     </SafeAreaProvider>
   );
 }
 
-const popUp = StyleSheet.create({
-  popUpDiv: {
+const signUp8 = StyleSheet.create({
+  mainDiv: {
+    height: '110%',
+    width: '100%',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    zIndex: -1,
+    transform: [{
+      translateX: '100%'
+    }],
+    backgroundColor: colors.purple
+  },
+  mainContent: {
+    height: '50%',
+    width: '100%',
+    marginTop: '60%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  mainTitle: {
+    fontFamily: 'SpoqaHanSansNeo-Medium',
+    fontSize: 28,
+    color: colors.white
+  },
+  mainTitleName: {
+    fontFamily: 'SpoqaHanSansNeo-Bold'
+  },
+  mainImage: {
+    height: '80%',
+    objectFit: 'contain'
+  }
+})
+
+const signUp7 = StyleSheet.create({
+  signUp7Div: {
     height: '100%',
     width: '100%',
     position: 'absolute',
@@ -252,8 +310,9 @@ const popUp = StyleSheet.create({
   }
 })
 
-const styles = StyleSheet.create({
+const signUp1 = StyleSheet.create({
   safeAreaView: {
+    height: '100%',
     backgroundColor: colors.purple
   },
   main: {
