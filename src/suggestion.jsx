@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { StyleSheet, TouchableWithoutFeedback, View, Image, Text, TextInput, Pressable, Animated, Easing } from 'react-native';
+import { StyleSheet, TouchableWithoutFeedback, View, Image, Text } from 'react-native';
 import colors from './assets/colors';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
-import dist from 'react-native-bouncy-checkbox';
 
 function Suggestion({ navigation }) {
   const [text, changeText] = useState({
@@ -14,9 +13,12 @@ function Suggestion({ navigation }) {
     console.log('skip suggestion');
   }
   function suggestion(){
+    if(text.text1 === "영양제의 성분이 건강 상태에 따라 다른 영향을 미칠 수 있어요."){
+      navigation.navigate('checkList');
+    }
     changeText({
-      text1: "영양제의 성분이 건강 상태에 따라 안 좋은 영향을 미칠 수 있어요.",
-      text2: "건강 상태를 참고해서 영양제를 추천해 드릴 수 있게 건강 상태를 입력해 주시겠어요?"
+      text1: "영양제의 성분이 건강 상태에 따라 다른 영향을 미칠 수 있어요.",
+      text2: "건강 상태를 참고해서 맞춤형 영양제를 추천해 드릴 수 있게 건강 상태를 입력해 주시겠어요?"
     })
     console.log('suggestion');
   }
@@ -27,8 +29,15 @@ function Suggestion({ navigation }) {
         <Image style={sug1.sugImage} source={require('./assets/img/suggestion1.png')}/>
         <View style={sug1.sugDiv}>
           <View style={sug1.sugTextDiv}>
-            <Text style={sug1.sugText}><Text style={sug1.sugTextAccent}>*</Text>{text.text1}</Text>
-            <Text style={sug1.sugText}>{text.text2}</Text>
+            <Text style={sug1.sugText}>
+              <Text style={sug1.sugTextAccent}>*</Text>
+              {/* //TODO: 줄바꿈 수정 필요 */}
+              {text.text1}
+              </Text>
+            <Text style={sug1.sugText}>
+              {/* //TODO: 줄바꿈 수정 필요 */}
+              {text.text2}
+            </Text>
           </View>
           <View style={sug1.sugButtonDiv}>
             <TouchableWithoutFeedback onPress={skipSuggestion}>
